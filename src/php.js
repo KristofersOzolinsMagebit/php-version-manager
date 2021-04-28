@@ -16,7 +16,7 @@ const current = () =>
  * @return {Array.string}
  */
 const versions = () =>
-  execSync("find /usr/bin -name 'php*.*' -type f | cut -b 13- | sort -g")
+  execSync("find /usr/bin -name 'php[0-9].[0-9]' -type f | cut -b 13- | sort -g")
     .toString()
     .trim()
     .split("\n");
